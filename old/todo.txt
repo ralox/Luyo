@@ -1,0 +1,8 @@
+Setup as Vue app
+    replace all existing jquery dynamics
+    replace all existing jquery listeners
+    place existing logic inside components
+
+End-screen udpates
+    Create templates to display resources 
+

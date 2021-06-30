@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <!--  Meta  -->
+  <meta charset="UTF-8" />
+  <title>Luyo</title>
+  
+  <!--  Styles  -->
+  <link rel="stylesheet" href="styles/index.processed.css">
+</head>
+<body>
+	<div class="non-play-screens">
+		
+		<div class="new-game screen">
+			<h1 class="title">Luyo</h1>
+			<p class="info">
+				Use W/A or left and right arrows to move.
+			</p>
+			<button class="button_primary play">Play</button>
+		</div>
+		
+		<div class="pause screen hidden">
+			<p class="info">
+				Paused
+			</p>
+			<button class="button play">Play</button>
+		</div>
+		
+		<!-- should have these build and insert on-demand rather than rely on hidden state -->
+		<div class="end-timeup screen hidden">
+			<div class="sumamry">
+				<p class="summary-title">
+					Your crew returns from a long mining run to rest and refuel.
+				</p>
+				<!-- make component for post-run sumamry -->
+				<div class="summary-resources">
+					<p>Resources Gathered:</p>
+					<ul>
+						<!-- show old + new (with new highlight) -->
+					</ul>
+				</div>
+				<div class="summary-expenses">
+					<p>Equipment Lost:</p>
+					<ul>
+						<!-- show lost mining equipment w/ cost -->
+					</ul>
+				</div>
+			</div>
+			<!-- make component for menu -->
+			<button class="button_primary play">Launch Mining Run</button>
+			<!-- Return to the Command Deck -->
+			
+		</div>
+		
+		<div class="end-win screen hidden">
+			<p class="info">
+				Your crew collected all the resources in this area and return to base.
+			</p>
+			<!-- add summary component -->
+			<!-- offer bonus for full clear -->
+			<button class="button_primary play">Launch Mining Run</button>
+		</div>
+		
+		<div class="end-lose screen hidden">
+			<p class="info">
+				All drones were lost or damaged on the run and the crew returns early.
+			</p>
+			<!-- add summary component -->
+			<button class="button_primary play">Launch Mining Run</button>
+		</div>
+		
+		<div class="command-deck screen hidden">
+			<!-- ship view -->
+			<!-- resource totals and goals -->
+			<!-- mining equipment & crafting -->
+			<button class="button_primary play">Launch Mining Run</button>
+		</div>
+		
+		
+	</div>
+	<canvas id="GameScreen"></canvas>
+  <script type="module" src="scripts/base.js"></script>
+</body>
+</html>
